@@ -179,7 +179,7 @@ function normalizeDate(dateString) {
         const dateColumn = 'formattedDate'; // Nom de la colonne contenant les dates
         actualDate = '20/04/2021'; // Date recherchée
         maxDate = '22/06/2024';        
-        const outputFilePath = 'out2.csv';
+        const outputFilePath = 'out.csv';
         let headers = [ 'Date', 'Niveau', 'Allonge', 'Assis', 'SessionID', 'formattedDate', 'serie' ];        
         let serieActuel = 0;
         let vie = 2;
@@ -210,8 +210,8 @@ function normalizeDate(dateString) {
 
             matchingLines.forEach(line =>
                     {
-                        //let result = line + "," + serieActuel;
-                        resultFinal.push(line)  
+                        let result = line + "," + serieActuel;
+                        resultFinal.push(result)  
                     }                       
             );
 
